@@ -1,0 +1,85 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Phone",
+      "category": "electronics",
+      "image": "",
+      "price": "10000",
+      "review": 4,
+      "stock": 5
+    },
+    {
+      "id": 2,
+      "name": "Electric Cooker",
+      "category": "electronics",
+      "image": "",
+      "price": "3000",
+      "review": 4,
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": "Water Heater",
+      "category": "electronics",
+      "image": "",
+      "price": "1000",
+      "review": 4,
+      "stock": 5
+    },
+    {
+      "id": 4,
+      "name": "T-shirt",
+      "category": "clothing",
+      "image": "",
+      "price": "1000",
+      "review": 4,
+      "stock": 5
+    },
+    {
+      "id": 5,
+      "name": "Shirt",
+      "category": "clothing",
+      "image": "",
+      "price": "1500",
+      "review": 4,
+      "stock": 5
+    },
+    {
+      "id": 6,
+      "name": "Pant",
+      "category": "clothing",
+      "image": "",
+      "price": "5000",
+      "review": 4,
+      "stock": 5
+    },
+    {
+      "id": 7,
+      "name": "Book",
+      "category": "digitalgoods",
+      "image": "",
+      "price": "100",
+      "review": 4,
+      "stock": 5
+    },
+    {
+      "id": 8,
+      "name": "Pen",
+      "category": "digitalgoods",
+      "image": "",
+      "price": "10",
+      "review": 4,
+      "stock": 5
+    },
+    {
+      "id": 9,
+      "name": "Calculator",
+      "category": "digitalgoods",
+      "image": "",
+      "price": "1000",
+      "review": 4,
+      "stock": 5
+    }
+  ]
+}

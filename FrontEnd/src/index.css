@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-white: #ffffff;
+  --clr-black: #000;
+  --clr-orange: #fc5007;
+  --clr-grey: #dadada;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background-color: var(--clr-grey);
+}
+
+.nav_links {
+  background-color: var(--clr-orange);
+  grid-column: 1 / span 3;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav_links li {
+  margin: 0 15px;
+}
