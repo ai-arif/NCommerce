@@ -25,10 +25,6 @@ async function main() {
 
   console.log("NCommerce deployed to:", await ncommerce.getAddress());
 
-  // Save the contract address to a deployment file
-  saveDeployment(networkName, "NCommerce", ncommerce.address);
-
-  // Verify the contract on Etherscan (if not on a local network)
   if (networkName !== "hardhat" && networkName !== "localhost") {
     console.log("Waiting for block confirmations...");
 
@@ -52,28 +48,6 @@ async function main() {
 
   return ncommerce;
 }
-
-// function saveDeployment(network, contractName, address) {
-//   const deploymentsPath = "./deployments";
-//   const networkPath = `${deploymentsPath}/${network}`;
-
-//   // Create directories if they don't exist
-//   if (!fs.existsSync(deploymentsPath)) {
-//     fs.mkdirSync(deploymentsPath);
-//   }
-
-//   if (!fs.existsSync(networkPath)) {
-//     fs.mkdirSync(networkPath);
-//   }
-
-//   // Save the contract address
-//   fs.writeFileSync(
-//     `${networkPath}/${contractName}.json`,
-//     JSON.stringify({ address }, null, 2)
-//   );
-
-//   console.log(`Deployment saved to ${networkPath}/${contractName}.json`);
-// }
 
 // Execute the deployment
 if (require.main === module) {

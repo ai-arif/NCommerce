@@ -5,10 +5,10 @@ import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import Product from "./components/Product";
 
-import config from "./config.json";
+// import config from "./config.json";
+const contractAddress = "0x7aaeb2a76b5d8eefa4509a524e66270829c1eede";
 
 import NCommerce from "./abis/NCommerce.json";
-// import { config } from "dotenv";
 
 function App() {
   const [provider, setProvider] = useState(null);
@@ -21,18 +21,21 @@ function App() {
 
   const [item, setItem] = useState({});
 
-  const loadingBlockchainDAta = async () => {
+  const loadingBlockchainData = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     setProvider(provider);
 
-    const network = await provider.getNetwork();
+    // const network = await provider.getNetwork();
 
     const ncommerce = new ethers.Contract(
-      config[network.chainId].ncommerce.address,
-      NCommerce,
+      contractAddress,
+      NCommerce.abi,
       provider
     );
+
     setNCommerce(ncommerce);
+
+    console.log(ncommerce.owner);
 
     const items = [];
 
@@ -53,8 +56,9 @@ function App() {
   };
 
   useEffect(() => {
-    loadingBlockchainDAta();
+    loadingBlockchainData();
   }, []);
+
   return (
     <div>
       <Navbar account={account} setAccount={setAccount} />
